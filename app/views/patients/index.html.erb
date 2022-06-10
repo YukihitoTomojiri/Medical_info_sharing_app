@@ -1,2 +1,7 @@
 <h1>Patients#index</h1>
 <p>Find me in app/views/patients/index.html.erb</p>
+<% if @patients[0]!= nil %>
+  <% @patients.each do |patient| %>
+    <%= patient.patient_first_name + patient.patient_last_name %>
+  <% end %>
+<% end %>
